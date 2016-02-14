@@ -1,0 +1,18 @@
+#content {
+    width: 600px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+html {
+    background-color: f6f6f6;
+}
+
+h1 {
+    color: #6a6a6a;
+    font-size: 40px
+}
+
+h3 {
+    color: #727272
+}

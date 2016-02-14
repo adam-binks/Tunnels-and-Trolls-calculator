@@ -1,22 +1,24 @@
 <head>
     <title>TnT Calculator</title>
     <script type="text/javascript" src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-
-    <h1>Tunnels and Trolls calculator</h1>
-    <h3>Combat</h3>
-    <p>Number of dice: <input id="numDice"> </p>
-    <p>Adds: <input id="numAdds"> </p>
-    <button onclick="rollCombat()">Roll dice</button>
-    <p id="results"></p>
-    <br>
-    <h3>Saving rolls</h3>
-    <p>Saving roll level: <input id="savingRollLevel"> </p>
-    <p>Attribute amount: <input id="attributeAmount"> </p>
-    <p>Level bonus: <input id="levelBonus"> </p>
-    <button onclick="rollSaving()">Do saving roll</button>
-    <p id="resultsSavingRoll"></p>
+    <div id="content">
+        <h1>Tunnels and Trolls calculator</h1>
+        <h3>Combat</h3>
+        <p>Number of dice: <input id="numDice"> </p>
+        <p>Adds: <input id="numAdds"> </p>
+        <button onclick="rollCombat()">Roll dice</button>
+        <p id="results"></p>
+        <br>
+        <h3>Saving rolls</h3>
+        <p>Saving roll level: <input id="savingRollLevel"> </p>
+        <p>Attribute amount: <input id="attributeAmount"> </p>
+        <p>Level bonus: <input id="levelBonus"> </p>
+        <button onclick="rollSaving()">Do saving roll</button>
+        <p id="resultsSavingRoll"></p>
+    </div>
     
 </body>
