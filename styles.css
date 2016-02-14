@@ -2,10 +2,11 @@
     width: 600px;
     margin: 0 auto;
     font-family: sans-serif;
+    padding-top: 20px;
 }
 
 html {
-    background-color: f6f6f6;
+    background-color: #f6f6f6;
 }
 
 h1 {
@@ -15,4 +16,13 @@ h1 {
 
 h3 {
     color: #727272
+}
+
+#rules {
+    font-size: 12;
+    color: grey;
+}
+
+a:link {
+    color: #7878ff;
 }

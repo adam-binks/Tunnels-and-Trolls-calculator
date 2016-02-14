@@ -1,14 +1,26 @@
 var recentResults = [];
 var maxRecentResults = 5;
 
-function rollDice(numDice, allowDoubles) {
+function rollDice(numDice) {
     "use strict";
     
     var result = Math.floor(Math.random() * (numDice * 6 - numDice + 1) + numDice);
-    // check if a double was rolled - if so, add another dice roll to the result. The second dice roll could even be a double.
-    if (allowDoubles && Math.random() < Math.pow(1 / 6, numDice)) {
-        result += rollDice(numDice, true);
+    return result;
+}
+
+// roll two dice. if they're the same, roll again and add on that result
+function rollTwoDiceAndCheckForDoubles() {
+    "use strict";
+    
+    var roll1 = Math.floor(Math.random() * 5 + 1);
+    var roll2 = Math.floor(Math.random() * 5 + 1);
+    
+    var result = roll1 + roll2;
+    
+    if (roll1 === roll2) {
+        result += rollTwoDiceAndCheckForDoubles();
     }
+    
     return result;
 }
 
@@ -45,7 +57,7 @@ function rollSaving() {
     var levelBonus = parseInt(document.getElementById("levelBonus").value);
     var resultsPara = document.getElementById("resultsSavingRoll");
     
-    var diceResult = rollDice(2, true); // allow double rerolls
+    var diceResult = rollTwoDiceAndCheckForDoubles();
     var requiredScore = level * 5 + 15;
     
     var didMakeSavingRollText = "passed";
